@@ -264,7 +264,32 @@ namespace ConsoleApp1
                 }
                 return factor;
             }
-*/     // 
+*/     // Crea una aplicación que nos cuente el número de cifras de un número entero positivo (hay que controlarlo)
+       //pedido por teclado. Crea un método que realice esta acción, pasando el número por parámetro, devolverá el 
+       //número de cifras.
+
+            string number;
+            Console.WriteLine("Type a positive number");
+            number = Console.ReadLine();
+
+            ManyNum(number);
         }
+
+        public static void FunctionName(int number)
+        {
+            Console.WriteLine("hello");
+        }
+        public static int ManyNum(string num1)
+        {
+            int nums;
+            //string  num2 = num1.ToString();
+            nums = num1.Length;
+
+            Console.WriteLine(nums);
+            Console.ReadLine();
+ 
+            return nums;
+        }
+        // 
     }
 }
