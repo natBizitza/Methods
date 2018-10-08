@@ -264,7 +264,7 @@ namespace ConsoleApp1
                 }
                 return factor;
             }
-*/     // Crea una aplicación que nos cuente el número de cifras de un número entero positivo (hay que controlarlo)
+     // Crea una aplicación que nos cuente el número de cifras de un número entero positivo (hay que controlarlo)
        //pedido por teclado. Crea un método que realice esta acción, pasando el número por parámetro, devolverá el 
        //número de cifras.
 
@@ -289,7 +289,55 @@ namespace ConsoleApp1
             Console.ReadLine();
  
             return nums;
+            }
+ */
+            // Crea un aplicación que nos convierta una cantidad de euros introducida por teclado a otra moneda, estas pueden ser a dolares, 
+            // yenes o libras. El método tendrá como parámetros, la cantidad de euros y la moneda a pasar que sera una cadena, este no devolverá 
+            //ningún valor, mostrara un mensaje indicando el cambio (void). El cambio de divisas son: 0.86 libras es un 1 €, 1.28611 $ es un 1 €
+            //129.852 yenes es un 1 €
+
+        double euros;
+        string currency = "";
+
+        Console.WriteLine("How many euros do you have?");
+        euros = Convert.ToDouble(Console.ReadLine());
+
+            Converter(euros, currency);
         }
-        // 
+        public static void Converter(double euros, string currency)
+        {
+            double result = 0;
+
+            Console.WriteLine("Convert to...");
+            Console.WriteLine("1 - Dollar");
+            Console.WriteLine("2 - Ruble");
+            Console.WriteLine("3 - CHF");
+
+            currency = Console.ReadLine();
+
+            //Console.Write(" it´s ");
+
+            switch (currency)
+            {
+                //currency is a string!!!! WE NEED "" ....
+                case "1":
+                    double dollar = 1.15;
+                    result = dollar * euros;
+                    Console.WriteLine(result + " dollars it´s " + euros + " euros");
+                    break;
+                case "2":
+                    double ruble = 76.58;
+                    result = ruble * euros;
+                    Console.WriteLine(result + " rubles it´s " + euros + " euros");
+                    break;
+                case "3":
+                    double chf = 1.14;
+                    result = chf * euros;
+                    Console.WriteLine(result + " CHF it´s " + euros + " euros");
+                    break;
+            }
+
+            Console.ReadLine();
+        }
     }
 }
