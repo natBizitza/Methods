@@ -201,7 +201,7 @@ namespace ConsoleApp1
             {
                 return number1 + number2;
             }
- */
+ 
             // Crea una aplicación que nos genere una cantidad de números enteros aleatorios que nosotros le pasaremos por teclado. 
             //Crea un método donde pasamos como parámetros entre que números queremos que los genere, 
             //podemos pedirlas por teclado antes de generar los números. Este método devolverá un número entero aleatorio. 
@@ -238,8 +238,33 @@ namespace ConsoleApp1
                 return numbers;
             }
 
+            // Crea una aplicación que nos calcule el factorial de un número pedido por 
+            //teclado, lo realizara mediante un método al que le pasamos el número como parámetro. 
+            //Para calcular el factorial, se multiplica los números anteriores hasta llegar a uno. Por ejemplo, 
+            //si introducimos un 5, realizara esta operación 5*4*3*2*1=120.
 
+            int num1;
+            Console.WriteLine("Type a number to calculate it´s factorial.");
+            num1 = Convert.ToInt32(Console.ReadLine());
 
-        
+            Factorial(num1);
+
+            Console.ReadLine();
+        }
+            public static int Factorial(int num1)
+            {
+                int factor;
+                factor = num1;
+
+                //to  calculate a factorial. We dont do i > =1, cause i=num1-1 and in the case we doit it will show us the final answer twice.
+                for (var i = num1 -1; i > 1; i--)
+                {
+                factor = factor *i;
+                Console.WriteLine(factor);
+                }
+                return factor;
+            }
+*/     // 
+        }
     }
 }
